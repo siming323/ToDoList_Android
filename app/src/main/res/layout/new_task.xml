@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/newTaskText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@null"
+        android:background="@android:color/transparent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:hint="New Task"/>
+
+    <RadioGroup
+        android:id="@+id/priorityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTaskText"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/highPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:layout_marginEnd="16dp"/>
+
+        <RadioButton
+            android:id="@+id/mediumPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_marginEnd="16dp"/>
+
+        <RadioButton
+            android:id="@+id/lowPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dueDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priorityGroup"
+        android:text="Select Due Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <Button
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dueDateText"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        android:text="Save"
+        android:textColor="@android:color/darker_gray"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dueDateText"
+        android:layout_toStartOf="@id/newTaskButton"
+        android:textSize="16sp"
+        android:text="Cancel"
+        android:textColor="@android:color/darker_gray"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>
+
+
+
+
